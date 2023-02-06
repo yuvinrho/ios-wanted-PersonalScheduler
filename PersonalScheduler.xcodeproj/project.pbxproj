@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A22A2FA299115C90069EAB7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1A22A2F9299115C90069EAB7 /* FirebaseAuth */; };
+		1A22A2FC299115C90069EAB7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1A22A2FB299115C90069EAB7 /* FirebaseFirestore */; };
+		1A22A2FE2991178E0069EAB7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A22A2FD2991178D0069EAB7 /* GoogleService-Info.plist */; };
 		63AAAB022967EA2600775EC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AAAB012967EA2600775EC3 /* AppDelegate.swift */; };
 		63AAAB042967EA2600775EC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AAAB032967EA2600775EC3 /* SceneDelegate.swift */; };
 		63AAAB062967EA2600775EC3 /* SchedulerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AAAB052967EA2600775EC3 /* SchedulerViewController.swift */; };
@@ -15,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A22A2FD2991178D0069EAB7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		63AAAAFE2967EA2600775EC3 /* PersonalScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalScheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63AAAB012967EA2600775EC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63AAAB032967EA2600775EC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A22A2FA299115C90069EAB7 /* FirebaseAuth in Frameworks */,
+				1A22A2FC299115C90069EAB7 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,13 +53,6 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1A22A2E92990962E0069EAB7 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		1A22A2EA299096360069EAB7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +66,13 @@
 				63AAAB052967EA2600775EC3 /* SchedulerViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1A22A30E29952A130069EAB7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		63AAAAF52967EA2600775EC3 = {
@@ -88,7 +94,8 @@
 		63AAAB002967EA2600775EC3 /* PersonalScheduler */ = {
 			isa = PBXGroup;
 			children = (
-				1A22A2E92990962E0069EAB7 /* Models */,
+				1A22A2FD2991178D0069EAB7 /* GoogleService-Info.plist */,
+				1A22A30E29952A130069EAB7 /* Models */,
 				1A22A2EA299096360069EAB7 /* Views */,
 				1A22A2EB2990963F0069EAB7 /* Controllers */,
 				1A22A2E82990961A0069EAB7 /* Supporting Files */,
@@ -112,6 +119,10 @@
 			dependencies = (
 			);
 			name = PersonalScheduler;
+			packageProductDependencies = (
+				1A22A2F9299115C90069EAB7 /* FirebaseAuth */,
+				1A22A2FB299115C90069EAB7 /* FirebaseFirestore */,
+			);
 			productName = PersonalScheduler;
 			productReference = 63AAAAFE2967EA2600775EC3 /* PersonalScheduler.app */;
 			productType = "com.apple.product-type.application";
@@ -140,6 +151,9 @@
 				Base,
 			);
 			mainGroup = 63AAAAF52967EA2600775EC3;
+			packageReferences = (
+				1A22A2F8299115C90069EAB7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 63AAAAFF2967EA2600775EC3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -155,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63AAAB0E2967EA2700775EC3 /* LaunchScreen.storyboard in Resources */,
+				1A22A2FE2991178E0069EAB7 /* GoogleService-Info.plist in Resources */,
 				63AAAB0B2967EA2700775EC3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +395,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1A22A2F8299115C90069EAB7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1A22A2F9299115C90069EAB7 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A22A2F8299115C90069EAB7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		1A22A2FB299115C90069EAB7 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A22A2F8299115C90069EAB7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 63AAAAF62967EA2600775EC3 /* Project object */;
 }
